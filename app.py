@@ -53,8 +53,6 @@ científicos publicados. Use os filtros e gráficos interativos para explorar os
 # Seção: Gráficos
 st.header('Visualização dos Dados')
 
-# Layout dos gráficos
-col1, col2 = st.columns(2)
 
 
 # Gráfico 4: Distribuição de Artigos por Ano (gráfico de barras)
@@ -76,6 +74,13 @@ ax8.set_title('Distribuição por Subárea Específica', fontsize=14)
 ax8.set_xlabel('Número de Artigos', fontsize=12)
 ax8.set_ylabel('Área Específica', fontsize=12)
 st.pyplot(fig8)
+
+
+
+
+
+# Layout dos gráficos
+col1, col2 = st.columns(2)
 
 # Gráfico 1: Distribuição de Artigos por Classificação Qualis
 col1.subheader('Distribuição de Artigos por Classificação Qualis')
