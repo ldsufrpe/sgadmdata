@@ -6,7 +6,7 @@ from datetime import datetime
 
 # Configuração inicial do Streamlit
 st.set_page_config(page_title="Análise de Artigos Científicos", layout="wide")
-
+st.image("logo.png", width=150)
 
 # Tema do Seaborn para gráficos mais elegantes
 sns.set_theme(style="whitegrid", palette="pastel")
