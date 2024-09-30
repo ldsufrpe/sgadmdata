@@ -36,7 +36,7 @@ ano_atual = datetime.now().year
 artigos_ano_atual = df_filtered[df_filtered['Ano'] == ano_atual].shape[0]
 
 # Exibir botões no topo com informações
-st.title('Análise de Artigos Científicos Publicados - Pós-Graduação')
+st.title('Análise de Artigos Científicos Publicados pelos Docentes do DM-UFRPE')
 
 col1, col2, col3, col4 = st.columns(4)
 col1.metric("Total de Artigos", total_artigos)
