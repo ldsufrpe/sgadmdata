@@ -44,6 +44,11 @@ col2.metric("Média de Artigos por Ano", f"{media_artigos_ano:.2f}")
 col3.metric("Média de Fator de Impacto", f"{media_fator_impacto:.2f}")
 col4.metric(f"Artigos em {ano_atual}", artigos_ano_atual)
 
+
+# **Adicionar o intervalo de anos** com destaque
+st.markdown(f"### Intervalo de Anos Analisado: **{ano[0]} - {ano[1]}**")
+
+
 # Seção: Introdução
 st.write("""
 Essa aplicação interativa fornece insights sobre a produção científica, classificações Qualis, fator de impacto, e internacionalização dos artigos
