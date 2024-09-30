@@ -46,7 +46,7 @@ col4.metric(f"Artigos em {ano_atual}", artigos_ano_atual)
 
 
 # **Adicionar o intervalo de anos** com destaque
-st.markdown(f"### Intervalo de Anos Analisado: **{ano[0]} - {ano[1]}**")
+st.markdown(f"### Intervalo de Anos Analisados: **{ano[0]} - {ano[1]}**")
 
 
 # Seção: Introdução
