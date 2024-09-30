@@ -143,6 +143,12 @@ ax6.set_xlabel('Fator de Impacto Médio', fontsize=12)
 ax6.set_ylabel('Área de Avaliação', fontsize=12)
 st.pyplot(fig6)
 
+# Definir a ordem desejada das classificações
+class_order = ['A1', 'A2', 'A3', 'A4', 'B1', 'B2', 'B3', 'B4', 'C']
+
+# Converter a coluna 'Classificação' para uma categoria com a ordem correta
+df_filtered['Classificação'] = pd.Categorical(df_filtered['Classificação'], categories=class_order, ordered=True)
+
 # Gráfico 7: Classificação vs. Fator de Impacto (Scatter Plot)
 st.subheader('Classificação vs. Fator de Impacto')
 fig7, ax7 = plt.subplots(figsize=(10, 6))
