@@ -56,6 +56,27 @@ st.header('Visualização dos Dados')
 # Layout dos gráficos
 col1, col2 = st.columns(2)
 
+
+# Gráfico 4: Distribuição de Artigos por Ano (gráfico de barras)
+st.subheader('Distribuição de Artigos por Ano')
+fig4, ax4 = plt.subplots(figsize=(10, 6))
+artigos_por_ano = df_filtered.groupby('Ano')['ID'].count()
+sns.barplot(x=artigos_por_ano.index, y=artigos_por_ano.values, palette='coolwarm', ax=ax4)
+ax4.set_title('Distribuição de Artigos por Ano', fontsize=14)
+ax4.set_xlabel('Ano', fontsize=12)
+ax4.set_ylabel('Número de Artigos', fontsize=12)
+st.pyplot(fig4)
+
+# Gráfico 8: Artigos por Subárea Específica
+st.subheader('Distribuição por Subárea Específica')
+fig8, ax8 = plt.subplots(figsize=(10, 6))
+subarea_counts = df_filtered['Área Específica'].value_counts()
+sns.barplot(y=subarea_counts.index, x=subarea_counts.values, palette='Spectral', ax=ax8)
+ax8.set_title('Distribuição por Subárea Específica', fontsize=14)
+ax8.set_xlabel('Número de Artigos', fontsize=12)
+ax8.set_ylabel('Área Específica', fontsize=12)
+st.pyplot(fig8)
+
 # Gráfico 1: Distribuição de Artigos por Classificação Qualis
 col1.subheader('Distribuição de Artigos por Classificação Qualis')
 fig1, ax1 = plt.subplots(figsize=(8, 6))
@@ -85,15 +106,7 @@ ax3.set_title('Proporção de Artigos com Internacionalização', fontsize=14)
 ax3.set_ylabel('')
 st.pyplot(fig3)
 
-# Gráfico 4: Distribuição de Artigos por Ano (gráfico de barras)
-st.subheader('Distribuição de Artigos por Ano')
-fig4, ax4 = plt.subplots(figsize=(10, 6))
-artigos_por_ano = df_filtered.groupby('Ano')['ID'].count()
-sns.barplot(x=artigos_por_ano.index, y=artigos_por_ano.values, palette='coolwarm', ax=ax4)
-ax4.set_title('Distribuição de Artigos por Ano', fontsize=14)
-ax4.set_xlabel('Ano', fontsize=12)
-ax4.set_ylabel('Número de Artigos', fontsize=12)
-st.pyplot(fig4)
+
 
 # Gráfico 5: Fator de Impacto por Ano e por Área Específica (apenas 4 áreas principais)
 st.subheader('Fator de Impacto por Ano e por Área Específica')
@@ -129,15 +142,7 @@ ax7.set_xlabel('Classificação', fontsize=12)
 ax7.set_ylabel('Fator de Impacto', fontsize=12)
 st.pyplot(fig7)
 
-# Gráfico 8: Artigos por Subárea Específica
-st.subheader('Distribuição por Subárea Específica')
-fig8, ax8 = plt.subplots(figsize=(10, 6))
-subarea_counts = df_filtered['Área Específica'].value_counts()
-sns.barplot(y=subarea_counts.index, x=subarea_counts.values, palette='Spectral', ax=ax8)
-ax8.set_title('Distribuição por Subárea Específica', fontsize=14)
-ax8.set_xlabel('Número de Artigos', fontsize=12)
-ax8.set_ylabel('Área Específica', fontsize=12)
-st.pyplot(fig8)
+
 
 # Gráfico 9: Artigos com Internacionalização por Classificação Qualis
 st.subheader('Artigos com Internacionalização por Classificação Qualis')
