@@ -1622,5 +1622,47 @@
         "Autores": "Ricardo Bortolotti, Eberson Silva, Paulo Varandas",
         "Internacionalização": "Não",
         "Fator de Impacto": 1.3
+    },
+    {
+        "ID": 117,
+        "DOI": "",
+        "Título": "Remarks on Modelling Serial Endosymbiosis and Evolution of Eukaryote Tissue Formation",
+        "Ano": 2019,
+        "Revista": "NONLINEAR STUDIES (ABINGDON)",
+        "ISSN": "1359-8678",
+        "Classificação": "B2",
+        "Área de Avaliação": "MATEMÁTICA / PROBABILIDADE E ESTATÍSTICA",
+        "Área Específica": "Matemática Aplicada",
+        "Autores": "P. L. Antonelli, S. F. Rutz , G. S. Ferreira Jr.",
+        "Internacionalização": "Sim",
+        "Fator de Impacto": 0.0
+    },
+    {
+        "ID": 118,
+        "DOI": null,
+        "Título": "A mathematical model of tissue formation: Symbioticism via differential adhesion and cell surface organelles",
+        "Ano": 2018,
+        "Revista": "NONLINEAR STUDIES (ABINGDON)",
+        "ISSN": "1359-8678",
+        "Classificação": "B2",
+        "Área de Avaliação": "MATEMÁTICA / PROBABILIDADE E ESTATÍSTICA",
+        "Área Específica": "Matemática Aplicada",
+        "Autores": "Peter Louis Antonelli, Solange F Rutz, Gilson Simões Ferreira Jr.",
+        "Internacionalização": "Sim",
+        "Fator de Impacto": 0.0
+    },
+    {
+        "ID": 119,
+        "DOI": "https://doi.org/10.1007/978-981-97-3886-1_6",
+        "Título": "Lefschetz Properties for Quadratic Stanley-Reisner Artinianizations and their Idealizations",
+        "Ano": 2024,
+        "Revista": "Springer INdAM Series",
+        "ISSN": "2281-518X",
+        "Classificação": "0",
+        "Área de Avaliação": "MATEMÁTICA / PROBABILIDADE E ESTATÍSTICA",
+        "Área Específica": "Álgebra",
+        "Autores": "Barbara Costa, Rodrigo Gondim",
+        "Internacionalização": "Não",
+        "Fator de Impacto": 1.2
     }
 ]
