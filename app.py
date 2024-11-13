@@ -3,6 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 from datetime import datetime
+import io
 
 # Configuração inicial do Streamlit
 st.set_page_config(page_title="Análise de Artigos Científicos", layout="wide")
@@ -19,6 +20,17 @@ def load_data():
 
 df = load_data()
 
+
+# Função para salvar o DataFrame como arquivo Excel
+def to_excel(df):
+    output = io.BytesIO()
+    with pd.ExcelWriter(output, engine='xlsxwriter') as writer:
+        df.to_excel(writer, index=False, sheet_name='Dados')
+    processed_data = output.getvalue()
+    return processed_data
+
+
+
 # Filtros interativos
 st.sidebar.header('Filtros')
 classificacao = st.sidebar.multiselect('Filtrar por Classificação Qualis', df['Classificação'].unique(), default=df['Classificação'].unique())
@@ -27,6 +39,15 @@ area_avaliacao = st.sidebar.multiselect('Filtrar por Área de Avaliação', df['
 
 # Aplicar os filtros ao DataFrame
 df_filtered = df[(df['Classificação'].isin(classificacao)) & (df['Ano'].between(ano[0], ano[1])) & (df['Área de Avaliação'].isin(area_avaliacao))]
+
+# Botão de download para o arquivo Excel
+st.sidebar.download_button(
+    label="Baixar dados em Excel",
+    data=to_excel(df_filtered),
+    file_name='dados_artigos.xlsx',
+    mime='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+)
+
 
 # Cálculos estatísticos para os botões
 total_artigos = df_filtered.shape[0]
